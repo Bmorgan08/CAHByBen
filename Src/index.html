@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cards Against Humanity</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Cards Against Humanity</h1>
+  <button id="startGame">Start Game</button>
+  <div id="blackCard"></div>
+  <div id="whiteCards"></div>
+
+  <script>
+    const socket = io('http://localhost:4040');
+    const startGameButton = document.getElementById('startGame');
+    const blackCardDiv = document.getElementById('blackCard');
+    const whiteCardsDiv = document.getElementById('whiteCards');
+
+    startGameButton.addEventListener('click', () => {
+      socket.emit('startGame', 'room1');
+    });
+
+    socket.on('startGame', ({ blackCard, whiteCards }) => {
+      blackCardDiv.textContent = blackCard.text;
+      whiteCardsDiv.innerHTML = whiteCards.map(card => `<button>${card}</button>`).join('');
+    });
+
+    socket.on('cardSelected', (text, playerId) => {
+      console.log(`${playerId} selected: ${text}`);
+    });
+
+    socket.on('revealCards', (submissions) => {
+      console.log('Submissions:', submissions);
+    });
+  </script>
+</body>
+</html>
