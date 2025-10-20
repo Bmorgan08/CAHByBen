@@ -1,0 +1,129 @@
+#room {
+    width: 175px;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    flex-basis:min-content ;
+    flex-shrink: 1;
+    align-items: center;
+    font: 15px Arial, sans-serif;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#roomInfo {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+#gameArea {
+    display: flex;
+    align-items:start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#PlayersList {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#blackCard {
+    margin: 50px;
+    border-radius: 15px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+#whiteCardsArea {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#whiteCard {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-size: 12px;
+    border: 2px solid black;
+    border-radius: 15px;
+    height:fit-content;
+    min-height: 150px;
+    width: calc(9% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    margin: 30px 0px 30px 0px;
+}
+
+#MainGameArea {
+    border: 2px solid black;
+    border-radius: 15px;
+
+    width: calc(100% - 30px);
+    display:flex;
+    align-items:center;
+}
+
+.playedCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 15px;
+}
+
+.playedCard{
+    user-select: none;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer; 
+}
+
+#CzarBlock {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    width:calc(100% - 2); 
+    height: 210px;
+    background-color: rgba(255, 0, 0 ,0.5); 
+    font-weight: bold; 
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#PlayedCardsArea {
+    display: flex;
+    flex-direction: row;
+}
