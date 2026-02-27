@@ -59,6 +59,11 @@ io.on("connection", (socket) => {
           console.log(`New owner of room ${roomName} is ${room.owner}`);
           socket.to(roomName).emit("newOwner", room.players[0].name);
         }
+        if (room.czarIndex === room.players.findIndex(p => p.id === socket.id)) {
+          room.czarIndex = room.czarIndex % room.players.length;
+          console.log(`Czar left room ${roomName}. New Czar is ${room.players[room.czarIndex].name}`);
+          socket.to(roomName).emit("Czar", room.players[room.czarIndex].name);
+        }
         break;
       }
     }
