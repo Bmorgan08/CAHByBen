@@ -9,11 +9,11 @@ To set this up on your own machine, you must:
 4. Forward ports 4040 and 3000. The URL port 4040 is forwarded to. Is the URL that the socket manager connects to.
 5. Give the URL to your friends and enjoy
 
-###Small issues
+### Small issues
 This site only renders correctly on screens bigger than an ipad so you cannot play on mobile sadly
 
-#Liscensing 
+### Liscensing 
 This project has no liscense however many modules used do have liscensing so be careful not to go against these liscenses and to know what you are doing
 
-##Fine print
+### Fine print
 since this is a passion project there is no guarentee it will work. and by utilising this software you understand you are at possible risk for which the authors are not liable.
