@@ -1,4 +1,4 @@
-const socket = io("https://zvq1cx6j-4040.uks1.devtunnels.ms/");
+const socket = io("wss://socket.cahbyben.xyz");
 
 function emit(event, data) {
     socket.emit(event, data);
